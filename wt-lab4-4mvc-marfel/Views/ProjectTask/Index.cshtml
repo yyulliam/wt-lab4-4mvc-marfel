@@ -1,0 +1,39 @@
+﻿@model IEnumerable<wt_lab4_4mvc_marfel.Models.ProjectTask>
+
+@{
+    ViewData["Title"] = "Задачи";
+}
+
+<h1>Задачи IT-проекта</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Добавить задачу</a>
+</p>
+
+<div class="row">
+    @foreach (var task in Model)
+    {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@task.Title</h5>
+                        <p class="card-text">
+                            <strong>Исполнитель:</strong> @task.Assignee<br />
+                            <strong>Приоритет:</strong> @task.Priority<br />
+                            <strong>Статус:</strong>
+                        @if (task.IsCompleted)
+                        {
+                                    <span class="badge bg-success">Выполнена</span>
+                        }
+                        else
+                        {
+                                    <span class="badge bg-warning text-dark">В работе</span>
+                        }
+                        </p>
+                        <a asp-action="Details" asp-route-id="@task.Id" class="btn btn-sm btn-outline-primary">Детали</a>
+                        <a asp-action="Edit" asp-route-id="@task.Id" class="btn btn-sm btn-outline-secondary">Редактировать</a>
+                    </div>
+                </div>
+            </div>
+    }
+</div>

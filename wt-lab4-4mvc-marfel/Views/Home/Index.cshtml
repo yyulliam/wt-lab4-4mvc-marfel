@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="container py-5">
+    <!-- Главный баннер -->
+    <div class="row align-items-center mb-5 mt-3">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 fw-bold text-primary">Система управления IT-проектами</h1>
+            <p class="lead text-muted mt-3">Удобный инструмент для отслеживания задач, назначения исполнителей и контроля сроков. Все ваши проекты в одном месте.</p>
+            <a asp-controller="ProjectTask" asp-action="Index" class="btn btn-primary btn-lg mt-4 shadow-sm px-4 rounded-pill">
+                Перейти к задачам
+            </a>
+        </div>
+    </div>
+
+    <!-- Блок с преимуществами (карточки Bootstrap) -->
+    <div class="row g-4 mt-5">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4">
+                <div class="card-body text-center p-4">
+                    <h5 class="card-title fw-bold">Удобство</h5>
+                    <p class="card-text text-muted">Все задачи структурированы и всегда под рукой.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4">
+                <div class="card-body text-center p-4">
+                    <h5 class="card-title fw-bold">Контроль</h5>
+                    <p class="card-text text-muted">Отслеживайте статус выполнения в режиме реального времени.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4">
+                <div class="card-body text-center p-4">
+                    <h5 class="card-title fw-bold">Команда</h5>
+                    <p class="card-text text-muted">Легко назначайте исполнителей на любые задачи.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
